@@ -1,0 +1,1883 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>HealthyBreak</title>
+    
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+    <link
+        href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap"
+        rel="stylesheet"
+    >
+
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+<div id="app">
+
+    <!-- =====================================================
+         ONBOARDING
+    ====================================================== -->
+
+    <section id="onboarding" class="screen">
+
+        <div class="onboarding-wrapper">
+
+            <!-- TOP STEPPER -->
+
+            <div class="top-stepper">
+
+                <div class="step active" data-step="1">1</div>
+                <div class="step-line"></div>
+
+                <div class="step" data-step="2">2</div>
+                <div class="step-line"></div>
+
+                <div class="step" data-step="3">3</div>
+                <div class="step-line"></div>
+
+                <div class="step" data-step="4">4</div>
+                <div class="step-line"></div>
+
+                <div class="step" data-step="5">5</div>
+
+            </div>
+
+ <!-- =================================================
+     STEP 1 - WELCOME
+================================================== -->
+
+<div
+    class="onboarding-panel active"
+    data-panel="1"
+>
+
+    <div class="brand-logo">
+        <div class="brand-logo">
+        </div>
+    </div>
+
+    <div class="hero-area">
+
+        <div class="hero-circle">
+            <img
+                src="images/image2.png"
+                alt="HealthyBreak Logo"
+                class="healthybreak-logo"
+            >
+        </div>
+
+    </div>
+
+    <div class="hero-text">
+        Take breaks. Refresh your mind.<br>
+        Be your best.
+    </div>
+
+    <button
+        type="button"
+        class="primary-button next-button"
+        data-next="2"
+    >
+        Let's Start
+    </button>
+
+</div>
+
+
+            <!-- =================================================
+                 STEP 2 - PROFILE
+            ================================================== -->
+
+            <div
+                class="onboarding-panel"
+                data-panel="2"
+            >
+
+                <h2>
+
+                    Set Up Your Profile
+
+                </h2>
+
+
+                <p class="panel-subtitle">
+                    Tell us about yourself.
+                </p>
+
+
+                <div class="profile-form">
+
+                    <!-- NICKNAME -->
+
+                    <div class="input-row">
+
+                        <div class="input-icon">
+                            ♙
+                        </div>
+
+                        <label for="nickname">
+                            Nickname
+                        </label>
+
+                        <input
+                            type="text"
+                            id="nickname"
+                            placeholder="Enter your nickname"
+                            autocomplete="off"
+                        >
+
+                    </div>
+
+
+                    <!-- YEAR LEVEL -->
+
+                    <div class="input-row">
+
+                        <div class="input-icon">
+                            ♢
+                        </div>
+
+                        <label for="yearLevel">
+                            Year Level
+                        </label>
+
+                        <select id="yearLevel">
+
+                            <option value="2nd Year">
+                                2nd Year
+                            </option>
+
+                            <option value="1st Year">
+                                1st Year
+                            </option>
+
+                            <option value="3rd Year">
+                                3rd Year
+                            </option>
+
+                            <option value="4th Year">
+                                4th Year
+                            </option>
+
+                        </select>
+
+                    </div>
+
+
+                    <!-- COURSE -->
+
+                    <div class="input-row">
+
+                        <div class="input-icon">
+                            ▤
+                        </div>
+
+                        <label for="course">
+                            Course
+                        </label>
+
+                        <select id="course">
+
+                            <option value="BIT-CPT">
+                                BIT-CPT
+                            </option>
+
+                            <option value="BSN">
+                                BSN
+                            </option>
+
+                            <option value="BSBA">
+                                BSBA
+                            </option>
+
+                            <option value="BSED">
+                                BSED
+                            </option>
+
+                            <option value="BSA">
+                                BSA
+                            </option>
+
+                            <option value="BSF">
+                                BSF
+                            </option>
+
+                            <option value="BSIT">
+                                BSIT
+                            </option>
+
+                            <option value="BSFAS">
+                                BSFAS
+                            </option>
+
+                            <option value="BEED">
+                                BEED
+                            </option>
+
+                            <option value="BTLEd">
+                                BTLEd
+                            </option>
+
+                            <option value="BTVTEd">
+                                BTVTEd
+                            </option>
+
+                            <option value="CEN">
+                                CEN
+                            </option>
+
+                     <option value="BAComm">BAComm</option>
+                     <option value="BSBio">
+                                BSBio
+                            </option>
+
+                            <option value="BSHM">
+                                BSHM
+                            </option>
+
+                            <option value="BPA">
+                                BPA
+                            </option>
+
+                        </select>
+
+                    </div>
+
+
+                    <!-- SCHOOL -->
+
+                    <div class="input-row">
+
+                        <div class="input-icon">
+                            ♜
+                        </div>
+
+                        <label for="school">
+                            School
+                        </label>
+
+                        <select id="school">
+
+                            <option value="SLSU - Gumaca">
+                                SLSU - Gumaca
+                            </option>
+
+                            <option value="SLSU - Lucena">
+                                SLSU - Lucena
+                            </option>
+
+                            <option value="SLSU - Tayabas">
+                                SLSU - Tayabas
+                            </option>
+
+                            <option value="SLSU - Lucban">
+                                SLSU - Lucban
+                            </option>
+
+                            <option value="SLSU - Alabat">
+                                SLSU - Alabat
+                            </option>
+
+                            <option value="SLSU - Catanauan">
+                                SLSU - Catanauan
+                            </option>
+
+                            <option value="SLSU - Infanta">
+                                SLSU - Infanta
+                            </option>
+
+                            <option value="SLSU - Polillo">
+                                SLSU - Polillo
+                            </option>
+
+                            <option value="SLSU - Tagkawayan">
+                                SLSU - Tagkawayan
+                            </option>
+
+                            <option value="SLSU - Tiaong">
+                                SLSU - Tiaong
+                            </option>
+
+                        </select>
+
+                    </div>
+
+                </div>
+
+
+                <button
+                    type="button"
+                    class="primary-button next-button"
+                    data-next="3"
+                >
+
+                    NEXT
+
+                    <span>›</span>
+
+                </button>
+
+            </div>
+
+
+            <!-- =================================================
+                 STEP 3 - SUBJECTS
+            ================================================== -->
+
+            <div
+                class="onboarding-panel"
+                data-panel="3"
+            >
+
+                <h2>Set Your Subjects</h2>
+
+                <p class="panel-subtitle">
+                    Add the subjects you're currently taking.
+                </p>
+
+
+                <!--
+                    EMPTY BY DEFAULT.
+                    JavaScript creates subject inputs.
+                -->
+
+                <div
+                    id="subjectList"
+                    class="subject-list"
+                >
+                </div>
+
+
+                <button
+                    type="button"
+                    id="addSubject"
+                    class="outline-button"
+                >
+
+                    ＋ ADD SUBJECT
+
+                </button>
+
+
+                <p class="subject-help">
+
+                    Type your own subject name.
+                    Example: Mathematics, Programming,
+                    English, Science, etc.
+
+                </p>
+
+
+                <button
+                    type="button"
+                    class="primary-button next-button"
+                    data-next="4"
+                >
+
+                    NEXT
+
+                    <span>›</span>
+
+                </button>
+
+            </div>
+
+
+            <!-- =================================================
+                 STEP 4 - SCHEDULE
+            ================================================== -->
+
+            <div
+                class="onboarding-panel schedule-panel"
+                data-panel="4"
+            >
+                <h2> Set Your Schedule</h2>
+
+                <p class="panel-subtitle">
+                    Add your class / study schedule.
+                </p>
+
+                <div class="day-selector">
+
+                    <button
+                        type="button"
+                        class="day active"
+                    >
+                        Mon
+                    </button>
+
+                    <button
+                        type="button"
+                        class="day"
+                    >
+                        Tue
+                    </button>
+
+                    <button
+                        type="button"
+                        class="day"
+                    >
+                        Wed
+                    </button>
+
+                    <button
+                        type="button"
+                        class="day"
+                    >
+                        Thu
+                    </button>
+
+                    <button
+                        type="button"
+                        class="day"
+                    >
+                        Fri
+                    </button>
+
+                     <button
+                        type="button"
+                        class="day"
+                    >
+                        Sat
+                    </button>
+
+                     <button
+                        type="button"
+                        class="day"
+                    >
+                        Sun
+                    </button>
+
+                </div>
+
+
+                <div class="schedule-content">
+
+                    <div class="schedule-list">
+                    </div>
+
+                </div>
+
+
+                <button
+                    type="button"
+                    class="primary-button next-button"
+                    data-next="5"
+                >
+
+                    NEXT
+
+                    <span>›</span>
+
+                </button>
+
+            </div>
+
+            <!-- =================================================
+                 STEP 5 - COMPLETE
+            ================================================== -->
+
+            <div
+                class="onboarding-panel final-panel"
+                data-panel="5"
+            >
+
+                <div class="success-circle">
+                    ✓
+                </div>
+
+
+                <h2> You're All Set!</h2>
+
+
+                <p class="success-text">
+
+                    Your HealthyBreak journey<br>
+                    starts now.
+
+                    <br><br>
+
+                    Let's study well, take breaks,<br>
+                    and feel better together!
+
+                    <span>
+                        ♥
+                    </span>
+
+                </p>
+
+
+                <button
+                    type="button"
+                    id="dashboardButton"
+                    class="primary-button"
+                >
+
+                    Go to Dashboard
+
+                    <span>
+                        →
+                    </span>
+
+                </button>
+
+            </div>
+
+        </div>
+
+    </section>
+
+
+    <!-- =====================================================
+         DASHBOARD
+    ====================================================== -->
+
+    <section
+        id="dashboard"
+        class="dashboard hidden"
+    >
+
+        <!-- SIDEBAR -->
+
+        <aside class="sidebar">
+
+            <div class="sidebar-logo">
+
+    <div class="music-controls">
+  <button title="Previous">⏮</button>
+  <button title="Play or Pause">▶</button>
+  <button title="Next">⏭</button>
+  <button title="Playlist">☷</button>
+</div>
+
+                Healthy<span>Break</span>
+
+            </div>
+
+
+            <nav class="sidebar-nav">
+
+                <button
+                    type="button"
+                    class="nav-button active"
+                    data-page="home"
+                >
+
+                    <span>⌂</span>
+
+                    Home
+
+                </button>
+
+
+                <button
+                    type="button"
+                    class="nav-button"
+                    data-page="study"
+                >
+
+                    <span>▣</span>
+
+                    My Study Plan
+
+                </button>
+
+
+                <button
+                    type="button"
+                    class="nav-button"
+                    data-page="activities"
+                >
+
+                    <span>♧</span>
+
+                    Activities
+
+                </button>
+
+
+                <button
+                    type="button"
+                    class="nav-button"
+                    data-page="progress"
+                >
+
+                    <span>▥</span>
+
+                    Progress
+
+                </button>
+
+
+                <button
+                    type="button"
+                    class="nav-button"
+                    data-page="settings"
+                >
+
+                    <span>⚙</span>
+
+                    Settings
+
+                </button>
+
+            </nav>
+
+
+            <div class="sidebar-bottom">
+
+                  <div class="hero-circle">
+            <img
+                src="images/image2.png"
+                alt="HealthyBreak Logo"
+                class="healthybreak-logo"
+            >
+        </div>
+
+                <p>
+                    Take a break<br>
+                    when you need it.
+                </p>
+
+            </div>
+
+        </aside>
+
+
+        <!-- MAIN -->
+
+        <main class="main-content">
+
+            <!-- HEADER -->
+
+            <header class="top-header">
+
+                <div></div>
+
+                <div class="user-area">
+
+
+                  
+
+                    <div class="user-avatar">
+   
+                        <i data-lucide="user-round-search"></i>
+
+                    </div>
+
+
+                    <div class="user-details">
+
+                        <strong id="headerName">
+                            Student
+                        </strong>
+
+                        <small>
+                            2nd Year • BIT-CPT<br>
+                            SLSU - Gumaca
+                        </small>
+
+                    </div>
+
+
+                    <span>
+                        ⌄
+                    </span>
+
+                </div>
+
+            </header>
+
+
+            <!-- =================================================
+                 HOME
+            ================================================== -->
+
+            <div
+                class="dashboard-page active"
+                id="page-home"
+            >
+
+                <h1>
+                    Good morning,
+                    <span id="welcomeName">
+                        Student
+                    </span>! 
+                </h1>
+
+
+                <p class="dashboard-subtitle">
+                    Let's make today productive and balanced.
+                </p>
+
+
+                <div class="statistics">
+
+                    <div class="stat-card">
+
+                        <div class="stat-icon fire">
+                            🔥
+                        </div>
+
+                        <div>
+
+                            <strong>0</strong>
+
+                            <small>
+                                Day Streak
+                            </small>
+
+                        </div>
+
+                    </div>
+
+
+                    <div class="stat-card">
+
+                        <div class="stat-icon green-icon">
+                            ◔
+                        </div>
+
+                        <div>
+
+                            <strong>0%</strong>
+
+                            <small>
+                                Today's Progress
+                            </small>
+
+                        </div>
+
+                    </div>
+
+
+                    <div class="stat-card">
+
+                        <div class="stat-icon blue-icon">
+                            ◷
+                        </div>
+
+                        <div>
+
+                            <strong>0m</strong>
+
+                            <small>
+                                Study Time Today
+                            </small>
+
+                        </div>
+
+                    </div>
+
+
+                    <div class="stat-card">
+
+                        <div class="stat-icon leaf-icon">
+                            🌿
+                        </div>
+
+                        <div>
+
+                            <strong>0</strong>
+
+                            <small>
+                                Breaks Today
+                            </small>
+
+                        </div>
+
+                    </div>
+
+                </div>
+
+
+                <div class="home-columns">
+
+                    <!-- TODAY'S SCHEDULE -->
+
+                    <div class="dashboard-card">
+
+                        <div class="card-header">
+
+                            <h2>
+                                ▣ Today's Schedule
+                            </h2>
+
+                            <a href="#">
+                                View All
+                            </a>
+
+                        </div>
+
+
+                        <div class="today-schedule">
+
+                            <div>
+
+                                <span>
+                                    --
+                                </span>
+
+                                <i class="dot gray-dot"></i>
+
+                                Free Time / Break
+
+                            </div>
+
+                        </div>
+
+                    </div>
+
+
+                    <!-- QUICK START -->
+
+                    <div class="dashboard-card quick-card">
+
+                        <h2>
+                            Quick Start
+                        </h2>
+
+
+                        <button
+                            type="button"
+                            id="startStudy"
+                            class="purple-action"
+                        >
+
+                            ▶ &nbsp;
+                            Start Study Session
+
+                        </button>
+
+
+                        <button
+                            type="button"
+                            id="takeBreak"
+                            class="green-action"
+                        >
+
+                            ♧ &nbsp;
+                            Take a Break
+
+                        </button>
+
+
+                        <button
+                            type="button"
+                            class="white-action"
+                        >
+
+                            ☷ &nbsp;
+                            Add Quick Note
+
+                        </button>
+
+                    </div>
+
+                </div>
+
+
+                <div class="green-message">
+
+                    ✧ &nbsp;
+
+                    Small progress each day adds up to big results. ❤️
+
+                    <span>
+                        🌱
+                    </span>
+
+                </div>
+
+            </div>
+
+
+            <!-- =================================================
+                 STUDY PLAN
+            ================================================== -->
+
+            <div
+                class="dashboard-page"
+                id="page-study"
+            >
+
+                <h1>
+                    My Study Plan
+                </h1>
+
+
+                <p class="dashboard-subtitle">
+                    Manage your subjects and weekly schedule.
+                </p>
+
+
+                <div class="study-tabs">
+
+                    <button
+                        type="button"
+                        class="active"
+                    >
+                        Subjects
+                    </button>
+
+                    <button type="button">
+                        Weekly Schedule
+                    </button>
+
+                </div>
+
+
+                <div class="study-columns">
+
+                    <!-- SUBJECTS -->
+
+                    <div class="dashboard-card">
+
+                        <div class="card-header">
+
+                            <h2>
+                                My Subjects
+                            </h2>
+
+                            <a href="#">
+                                + Add Subject
+                            </a>
+
+                        </div>
+
+
+                        <div class="subject-progress">
+                        </div>
+
+                    </div>
+
+
+                    <!-- SELECTED SUBJECT -->
+
+                    <div class="dashboard-card selected-subject">
+
+                        <h2>
+                            Selected Subject
+                        </h2>
+
+
+                        <h3>
+                            No subject selected
+                        </h3>
+
+
+                        <div class="selected-info">
+
+                            <p>
+
+                                <b>
+                                    Goal
+                                </b>
+
+                                <span>
+                                    2 hours per week
+                                </span>
+
+                            </p>
+
+
+                            <p>
+
+                                <b>
+                                    Progress
+                                </b>
+
+                                <span>
+                                    0%
+                                </span>
+
+                            </p>
+
+
+                            <div class="large-progress">
+                                <i style="width:0%"></i>
+                            </div>
+
+
+                            <p>
+
+                                <b>
+                                    Schedule
+                                </b>
+
+                                <span>
+                                    No schedule yet
+                                </span>
+
+                            </p>
+
+                        </div>
+
+
+                        <div class="selected-actions">
+
+                            <button
+                                type="button"
+                                class="white-action"
+                            >
+                                Edit
+                            </button>
+
+
+                            <button
+                                type="button"
+                                class="purple-action"
+                            >
+                                ▶ Start Study Session
+                            </button>
+
+                        </div>
+
+                    </div>
+
+                </div>
+
+
+                <!-- WEEKLY SCHEDULE -->
+
+                <div class="dashboard-card weekly-card">
+
+                    <h2>
+                        My Weekly Schedule
+                    </h2>
+
+
+                    <div class="calendar">
+
+                        <div></div>
+
+                        <b>MON</b>
+                        <b>TUE</b>
+                        <b>WED</b>
+                        <b>THU</b>
+                        <b>FRI</b>
+                        <b>SAT</b>
+                        <b>SUN</b>
+
+
+                        <span>
+                            Morning
+                        </span>
+
+                        <em>—</em>
+                        <em>—</em>
+                        <em>—</em>
+                        <em>—</em>
+                        <em>—</em>
+                        <em>—</em>
+                        <em>—</em>
+
+
+                        <span>
+                            Afternoon
+                        </span>
+
+                        <em>—</em>
+                        <em>—</em>
+                        <em>—</em>
+                        <em>—</em>
+                        <em>—</em>
+                        <em>—</em>
+                        <em>—</em>
+
+
+                        <span>
+                            Evening
+                        </span>
+
+                        <em>—</em>
+                        <em>—</em>
+                        <em>—</em>
+                        <em>—</em>
+                        <em>—</em>
+                        <em>—</em>
+                        <em>—</em>
+
+                    </div>
+                </div>
+            </div>
+
+
+            
+<!-- ACTIVITIES -->
+<div class="dashboard-page" id="page-activities">
+
+    <h1>Break Activities</h1>
+    <p class="dashboard-subtitle">
+        Take a break, refresh your mind and body.
+    </p>
+
+    <!-- CATEGORY FILTERS -->
+    <div class="activity-tabs">
+        <button type="button" class="active" data-filter="all">All</button>
+        <button type="button" data-filter="relax">Relax</button>
+        <button type="button" data-filter="move">Move</button>
+        <button type="button" data-filter="breathe">Breathe</button>
+    </div>
+
+
+    <div class="activity-grid">
+
+        <div class="activity-card" data-category="relax">
+            <div class="activity-image"><img src="images/naptime.jpg" alt="Nap Time"></div>
+            <h3>Nap Time</h3><small>10 minutes</small>
+            <button type="button">Start</button>
+        </div>
+
+        <div class="activity-card" data-category="relax">
+            <div class="activity-image"><img src="images/listentomusic.jpg" alt="Listen to Music"></div>
+            <h3>Listen to Music</h3><small>5 minutes</small>
+            <button type="button">Start</button>
+        </div>
+
+        <div class="activity-card" data-category="relax">
+            <div class="activity-image"><img src="images/eyerest.jpg" alt="Eye Rest"></div>
+            <h3>Eye Rest</h3><small>2 minutes</small>
+            <button type="button">Start</button>
+        </div>
+
+        <div class="activity-card" data-category="relax">
+            <div class="activity-image"><img src="images/daydream.jpg" alt="Daydream"></div>
+            <h3>Daydream</h3><small>3 minutes</small>
+            <button type="button">Start</button>
+        </div>
+
+        <div class="activity-card" data-category="relax">
+            <div class="activity-image"><img src="images/hydration.jpg" alt="Hydration"></div>
+            <h3>Hydration</h3><small>1 minute</small>
+            <button type="button">Start</button>
+        </div>
+
+        <div class="activity-card" data-category="relax">
+            <div class="activity-image"><img src="images/gratitudemoment.jpg" alt="Gratitude Moment"></div>
+            <h3>Gratitude Moment</h3><small>2 minutes</small>
+            <button type="button">Start</button>
+        </div>
+
+    </div>
+
+    <div class="activity-grid">
+
+        <div class="activity-card" data-category="move">
+            <div class="activity-image"><img src="images/walkaround.jpg" alt="Walk Around"></div>
+            <h3>Walk Around</h3><small>5 minutes</small>
+            <button type="button">Start</button>
+        </div>
+
+        <div class="activity-card" data-category="move">
+            <div class="activity-image"><img src="images/tidydesk.jpg" alt="Tidy Desk"></div>
+            <h3>Tidy Desk</h3><small>3 minutes</small>
+            <button type="button">Start</button>
+        </div>
+
+        <div class="activity-card" data-category="move">
+            <div class="activity-image"><img src="images/shoulderrolls.jpg" alt="Shoulder Rolls"></div>
+            <h3>Shoulder Rolls</h3><small>2 minutes</small>
+            <button type="button">Start</button>
+        </div>
+
+        <div class="activity-card" data-category="move">
+            <div class="activity-image"><img src="images/neckstretch.jpg" alt="Neck Stretch"></div>
+            <h3>Neck Stretch</h3><small>2 minutes</small>
+            <button type="button">Start</button>
+        </div>
+
+        <div class="activity-card" data-category="move">
+            <div class="activity-image"><img src="images/wristandfingerstretch.jpg" alt="Wrist and Finger Stretch"></div>
+            <h3>Wrist and Finger Stretch</h3><small>2 minutes</small>
+            <button type="button">Start</button>
+        </div>
+
+    </div>
+
+    <div class="activity-grid">
+
+        <div class="activity-card" data-category="breathe">
+            <div class="activity-image"><img src="images/deepbreathing.jpg" alt="Deep Breathing"></div>
+            <h3>Deep Breathing</h3><small>2 minutes</small>
+            <button type="button">Start</button>
+        </div>
+
+        <div class="activity-card" data-category="breathe">
+            <div class="activity-image"><img src="images/boxbreathing.jpg" alt="Box Breathing"></div>
+            <h3>Box Breathing</h3><small>2 minutes</small>
+            <button type="button">Start</button>
+        </div>
+
+        <div class="activity-card" data-category="breathe">
+            <div class="activity-image"><img src="images/478breathing.jpg" alt="4-7-8 Breathing"></div>
+            <h3>4-7-8 Breathing</h3><small>2 minutes</small>
+            <button type="button">Start</button>
+        </div>
+
+        <div class="activity-card" data-category="breathe">
+            <div class="activity-image"><img src="images/humasong.jpg" alt="Hum a Song"></div>
+            <h3>Hum a Song</h3><small>2 minutes</small>
+            <button type="button">Start</button>
+        </div>
+
+    </div>
+
+    <!-- SURPRISE ACTIVITY -->
+    <div class="surprise-box">
+        <span>✨</span>
+        <div>
+            <strong>Surprise Me!</strong>
+            <small>Get a random break activity</small>
+        </div>
+        <button type="button" id="surpriseButton">→</button>
+    </div>
+
+</div>
+
+       
+
+            <!-- =================================================
+                 PROGRESS
+            ================================================== -->
+
+            <div
+                class="dashboard-page"
+                id="page-progress"
+            >
+
+                <h1>
+                    My Progress
+                </h1>
+
+
+                <p class="dashboard-subtitle">
+                    Track your study and wellness journey.
+                </p>
+
+
+                <div class="statistics">
+
+                    <div class="stat-card">
+
+                        <div class="stat-icon blue-icon">
+                            ◷
+                        </div>
+
+                        <div>
+
+                            <strong>
+                                0m
+                            </strong>
+
+                            <small>
+                                Study Time
+                            </small>
+
+                        </div>
+
+                    </div>
+
+
+                    <div class="stat-card">
+
+                        <div class="stat-icon green-icon">
+                            ◔
+                        </div>
+
+                        <div>
+
+                            <strong>
+                                0m
+                            </strong>
+
+                            <small>
+                                Break Time
+                            </small>
+
+                        </div>
+
+                    </div>
+
+
+                    <div class="stat-card">
+
+                        <div class="stat-icon blue-icon">
+                            ▣
+                        </div>
+
+                        <div>
+
+                            <strong>
+                                0
+                            </strong>
+
+                            <small>
+                                Study Sessions
+                            </small>
+
+                        </div>
+
+                    </div>
+
+
+                    <div class="stat-card">
+
+                        <div class="stat-icon leaf-icon">
+                            🌿
+                        </div>
+
+                        <div>
+
+                            <strong>
+                                0%
+                            </strong>
+
+                            <small>
+                                Wellness Balance
+                            </small>
+
+                        </div>
+
+                    </div>
+
+                </div>
+
+
+                <div class="progress-columns">
+
+                    <!-- CHART -->
+
+                    <div class="dashboard-card chart-card">
+
+                        <h2>
+                            Study & Wellness Balance
+                        </h2>
+
+
+                        <div class="chart">
+
+                            <div
+                                class="bar"
+                                style="height:30%"
+                            ></div>
+
+                            <div
+                                class="bar"
+                                style="height:20%"
+                            ></div>
+
+                            <div
+                                class="bar"
+                                style="height:35%"
+                            ></div>
+
+                            <div
+                                class="bar"
+                                style="height:25%"
+                            ></div>
+
+                            <div
+                                class="bar"
+                                style="height:30%"
+                            ></div>
+
+                        </div>
+
+
+                        <div class="chart-days">
+
+                            <span>Mon</span>
+                            <span>Wed</span>
+                            <span>Thu</span>
+                            <span>Fri</span>
+                            <span>Sun</span>
+
+                        </div>
+
+                    </div>
+
+
+                    <!-- SUBJECT PROGRESS -->
+
+                    <div class="dashboard-card">
+
+                        <h2>
+                            Subject Progress
+                        </h2>
+
+
+                        <div class="subject-line">
+
+                            <span>
+                                Subject 1
+                            </span>
+
+                            <b>
+                                0%
+                            </b>
+
+                            <div>
+                                <i style="width:0%"></i>
+                            </div>
+
+                        </div>
+
+
+                        <div class="subject-line">
+
+                            <span>
+                                Subject 2
+                            </span>
+
+                            <b>
+                                0%
+                            </b>
+
+                            <div>
+                                <i style="width:0%"></i>
+                            </div>
+
+                        </div>
+
+
+                        <div class="subject-line">
+
+                            <span>
+                                Subject 3
+                            </span>
+
+                            <b>
+                                0%
+                            </b>
+
+                            <div>
+                                <i style="width:0%"></i>
+                            </div>
+
+                        </div>
+
+
+                        <div class="subject-line">
+
+                            <span>
+                                Subject 4
+                            </span>
+
+                            <b>
+                                0%
+                            </b>
+
+                            <div>
+                                <i style="width:0%"></i>
+                            </div>
+
+                        </div>
+
+                    </div>
+
+                </div>
+
+
+                <!-- ACHIEVEMENTS -->
+
+                <div class="dashboard-card achievements">
+
+                    <h2>
+                        Achievements
+                    </h2>
+
+
+                    <div class="achievement-grid">
+
+                        <div>
+
+                            🔥
+
+                            <strong>
+                                Day Streak
+                            </strong>
+
+                            <small>
+                                Studied for days in a row
+                            </small>
+
+                        </div>
+
+
+                        <div>
+
+                            🌿
+
+                            <strong>
+                                Wellness Week
+                            </strong>
+
+                            <small>
+                                Maintained balance for days
+                            </small>
+
+                        </div>
+
+
+                        <div>
+
+                            🎯
+
+                            <strong>
+                                Goal Getter
+                            </strong>
+
+                            <small>
+                                Completed your weekly goal
+                            </small>
+
+                        <div>
+
+                            🧘
+
+                            <strong>
+                                Mindful Student
+                            </strong>
+
+                            <small>
+                                Completed 10 wellness activities
+                            </small>
+
+                        </div>
+
+
+                        </div>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+
+            <!-- =================================================
+                 SETTINGS
+            ================================================== -->
+
+            <div
+                class="dashboard-page"
+                id="page-settings"
+            >
+
+                <h1>
+                    Settings
+                </h1>
+
+
+                <p class="dashboard-subtitle">
+                    Customize your HealthyBreak experience.
+                </p>
+
+
+                <div class="settings-layout">
+
+                    <!-- SETTINGS MENU -->
+
+                    <div class="settings-menu">
+
+                        <button
+                            type="button"
+                            class="active"
+                        >
+                            ♙ &nbsp; Profile
+                        </button>
+
+
+                        <button type="button">
+                            ◉ &nbsp; Appearance
+                        </button>
+
+
+                        <button type="button">
+                            ♧ &nbsp; Notifications
+                        </button>
+
+
+                        <button type="button">
+                            ☕ &nbsp; Study & Break
+                        </button>
+
+
+                        <button type="button">
+                            ▣ &nbsp; Schedule
+                        </button>
+
+
+                        <button type="button">
+                            ▤ &nbsp; Data & Offline
+                        </button>
+
+
+                        <button type="button">
+                            ⓘ &nbsp; About
+                        </button>
+
+                    </div>
+
+
+                    <!-- PROFILE CARD -->
+
+                    <div class="dashboard-card profile-card">
+
+                        <h2>
+                            Profile Information
+                        </h2>
+
+
+                        
+
+                        <div class="settings-avatar">
+
+   
+                            <i data-lucide="user-round-search" class="profile-user-icon"></i>
+
+   
+                            <span>
+       
+                                ✎
+  
+                            </span>
+
+
+                        </div>
+
+
+
+                        <!-- NICKNAME -->
+
+                        <div class="setting-field">
+
+                            <label for="settingsNickname">
+                                Nickname
+                            </label>
+
+                            <input
+                                type="text"
+                                id="settingsNickname"
+                                value=""
+                                placeholder="Enter your nickname"
+                            >
+
+                        </div>
+
+
+                        <!-- YEAR LEVEL -->
+
+                        <div class="setting-field">
+
+                            <label for="settingsYearLevel">
+                                Year Level
+                            </label>
+
+                            <select id="settingsYearLevel">
+
+                                <option value="2nd Year">
+                                    2nd Year
+                                </option>
+
+                                <option value="1st Year">
+                                    1st Year
+                                </option>
+
+                                <option value="3rd Year">
+                                    3rd Year
+                                </option>
+
+                                <option value="4th Year">
+                                    4th Year
+                                </option>
+
+                            </select>
+
+                        </div>
+
+
+                        <!-- COURSE -->
+
+                        <div class="setting-field">
+
+                            <label for="settingsCourse">
+                                Course
+                            </label>
+
+                            <select id="settingsCourse">
+
+                                <option value="BIT-CPT">
+                                    BIT-CPT
+                                </option>
+
+                                <option value="BSN">
+                                    BSN
+                                </option>
+
+                                <option value="BSBA">
+                                    BSBA
+                                </option>
+
+                                <option value="BSED">
+                                    BSED
+                                </option>
+
+                                <option value="BSA">
+                                    BSA
+                                </option>
+
+                                <option value="BSF">
+                                    BSF
+                                </option>
+
+                                <option value="BSIT">
+                                    BSIT
+                                </option>
+
+                                <option value="BSFAS">
+                                    BSFAS
+                                </option>
+
+                                <option value="BEED">
+                                    BEED
+                                </option>
+
+                                <option value="BTLEd">
+                                    BTLEd
+                                </option>
+
+                                <option value="BTVTEd">
+                                    BTVTEd
+                                </option>
+
+                                <option value="CEN">
+                                    CEN
+                                </option>
+
+                                <option value="BAComm">
+                                    BAComm
+                                </option>
+
+                                <option value="BSBio">
+                                    BSBio
+                                </option>
+
+                                <option value="BSHM">
+                                    BSHM
+                                </option>
+
+                                <option value="BPA">
+                                    BPA
+                                </option>
+
+                            </select>
+
+                        </div>
+
+
+                        <!-- SCHOOL -->
+
+                        <div class="setting-field">
+
+                            <label for="settingsSchool">
+                                School
+                            </label>
+
+                            <select id="settingsSchool">
+
+                                <option value="SLSU - Gumaca">
+                                    SLSU - Gumaca
+                                </option>
+
+                                <option value="SLSU - Lucena">
+                                    SLSU - Lucena
+                                </option>
+
+                                <option value="SLSU - Tayabas">
+                                    SLSU - Tayabas
+                                </option>
+
+                                <option value="SLSU - Lucban">
+                                    SLSU - Lucban
+                                </option>
+
+                                <option value="SLSU - Alabat">
+                                    SLSU - Alabat
+                                </option>
+
+                                <option value="SLSU - Catanauan">
+                                    SLSU - Catanauan
+                                </option>
+
+                                <option value="SLSU - Infanta">
+                                    SLSU - Infanta
+                                </option>
+
+                                <option value="SLSU - Polillo">
+                                    SLSU - Polillo
+                                </option>
+
+                                <option value="SLSU - Tagkawayan">
+                                    SLSU - Tagkawayan
+                                </option>
+
+                                <option value="SLSU - Tiaong">
+                                    SLSU - Tiaong
+                                </option>
+
+                            </select>
+
+                        </div>
+
+
+                        <button
+                            type="button"
+                            id="saveSettings"
+                            class="save-button"
+                        >
+                            Save Changes
+                        </button>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+        </main>
+
+    </section>
+
+</div>
+
+<!-- =====================================================
+     TOAST
+====================================================== -->
+
+<div
+    id="toast"
+    class="toast"
+>
+    Message
+</div>
+
+
+<!-- =====================================================
+     JAVASCRIPT
+====================================================== -->
+
+<script src="script.js"></script>
+
+</body>
+</html>
