@@ -3830,7 +3830,7 @@ document.addEventListener("DOMContentLoaded", () => {
         let index = 0;
         let loaded = false;
 
-        audio.preload = "none";
+        audio.preload = "metadata";
         audio.volume = clamp(Number(prefs.volume ?? 0.6), 0, 1);
 
         /* ---------- styles ---------- */
