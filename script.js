@@ -3833,7 +3833,7 @@ document.addEventListener("DOMContentLoaded", () => {
         audio.preload = "auto";
         audio.volume = clamp(Number(prefs.volume ?? 0.6), 0, 1);
 
-        /* ---------- styles ---------- */
+        /* styles  */
 
         const style = document.createElement("style");
 
@@ -3862,40 +3862,50 @@ document.addEventListener("DOMContentLoaded", () => {
             .hb-track-row { cursor: pointer; transition: border-color .2s ease, background .2s ease; }
             .hb-track-row:hover { border-color: var(--line-strong); }
             .hb-track-row.current { border-color: var(--cyan); background: var(--tint); }
-                        @media (max-width: 700px) {
-                /* Phone: mini player floating above the bottom navigation */
+                                    @media (max-width: 700px) {
+                /* Phone: maliit na mini player sa ibabaw ng bottom navigation */
                 .hb-player {
                     display: grid;
                     grid-template-columns: minmax(0, 1fr) auto;
                     grid-template-areas: "info buttons" "seek seek";
                     align-items: center;
-                    column-gap: 10px;
-                    row-gap: 4px;
+                    column-gap: 8px;
+                    row-gap: 2px;
 
                     position: fixed;
-                    left: max(10px, var(--safe-left));
-                    right: max(10px, var(--safe-right));
-                    bottom: calc(66px + var(--safe-bottom) + 8px);
+                    left: max(8px, var(--safe-left));
+                    right: max(8px, var(--safe-right));
+                    bottom: calc(66px + var(--safe-bottom) + 6px);
                     z-index: 25;
 
                     margin: 0;
-                    padding: 8px 10px;
+                    padding: 6px 8px;
                     background: var(--panel);
                     border-color: var(--line);
-                    box-shadow: 0 8px 24px rgba(0, 0, 0, .5);
+                    border-radius: 12px;
+                    box-shadow: 0 6px 18px rgba(0, 0, 0, .5);
                 }
-                .hb-player-top { grid-area: info; margin: 0; min-width: 0; }
-                .hb-player-icon { width: 30px; height: 30px; font-size: 14px; }
+                .hb-player-top { grid-area: info; margin: 0; min-width: 0; gap: 8px; }
+                .hb-player-icon { width: 28px; height: 28px; font-size: 13px; border-radius: 8px; }
                 .hb-player-info strong { font-size: 12px; }
+                .hb-player-info small { font-size: 10px; }
                 .hb-player-buttons { grid-area: buttons; margin: 0; gap: 4px; }
-                .hb-player-buttons button { flex: none; width: 38px; height: 38px; }
-                .hb-player-buttons .hb-play { flex: none; width: 46px; }
-                .hb-seek { grid-area: seek; }
+                .hb-player-buttons button { flex: none; width: 34px; height: 34px; font-size: 13px; }
+                .hb-player-buttons .hb-play { flex: none; width: 42px; }
+                .hb-seek { grid-area: seek; height: 10px; }
                 .hb-player-volume { display: none; }
 
-            { padding-bottom: calc(150px + var(--safe-bottom)); }
-            (#dashboard:not(.hidden)) .toast { bottom: calc(150px + var(--safe-bottom)); }
+                /* Espasyo sa ilalim ng page para hindi matakpan ng player ang content */
+                body #dashboard:not(.hidden) .main-content {
+                    padding-bottom: calc(150px + var(--safe-bottom));
+                }
+
+                /* Toast sa itaas ng player */
+                body .toast {
+                    bottom: calc(140px + var(--safe-bottom));
+                }
             }
+                
             @media (max-height: 760px) and (min-width: 701px) { .hb-player-volume { display: none; } .hb-player { margin-bottom: 12px; padding: 10px; } }
             @media (max-height: 600px) and (min-width: 701px) { .hb-player-top { display: none; } .hb-player { margin-bottom: 8px; padding: 8px; } .hb-player-buttons { margin: 6px 0 0; } }
         `;
