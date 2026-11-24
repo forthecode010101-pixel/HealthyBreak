@@ -2884,7 +2884,7 @@ document.addEventListener("DOMContentLoaded", () => {
         updateStatistics();
         renderProgressChart();
         renderSubjectProgress();
-        renderAchievements();
+        renderTaskGoals();
     }
 
     function renderProgressChart() {
@@ -2942,7 +2942,7 @@ document.addEventListener("DOMContentLoaded", () => {
         });
     }
 
-    function renderAchievements() {
+    function renderTaskGoals() {
 
         const container = $(".achievement-grid");
 
@@ -2972,7 +2972,6 @@ document.addEventListener("DOMContentLoaded", () => {
                 description: totals.breakCount >= 10 ? "Completed 10 wellness activities" : `${totals.breakCount}/10 activities completed`,
                 unlocked: totals.breakCount >= 10
             },
-            
         ];
 
         container.innerHTML = "";
@@ -3254,8 +3253,7 @@ document.addEventListener("DOMContentLoaded", () => {
 
     function showAboutSettings() {
 
-        // EDIT THIS: team photo, developer names and the date the app was made.
-        // Put the team photo in the images/ folder (example: images/team.jpg).
+    
         const aboutInfo = {
             version: "1",
             created: "2026",
@@ -3813,9 +3811,12 @@ document.addEventListener("DOMContentLoaded", () => {
         const MUSIC_KEY = "healthyBreakMusic";
 
         const tracks = [
-            { title: "About You", src: "music/aboutyou.mp3" },
-            { title: "Lover", src: "music/lover.mp3" },
-            { title: "River Flows In You", src: "music/riverflowsinyou.mp3" }
+            { title: "13", src: "music/13.mp3" },
+            { title: "Beauty and A beat", src: "music/beautyandabeat.mp3" },
+            { title: "Summer Crush", src: "music/summercrush.mp3" },
+            { title: "Be Your Everything", src: "music/beyoureverything.mp3" },
+            { title: "Weng-Weng", src: "music/weng-weng.mp3" },
+            
         ];
 
         const controls = $(".music-controls");
