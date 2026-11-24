@@ -1,10 +1,12 @@
-/* HEALTHY BREAK  */
+/* =========================================================
+HEALTHY BREAK
+========================================================= */
 
 document.addEventListener("DOMContentLoaded", () => {
 
     "use strict";
 
-    /* STORAGE */
+    /* ===================== STORAGE ===================== */
 
     const STORAGE_KEY = "healthyBreakData";
     const LOGS_KEY = "healthyBreakLogs";
@@ -146,7 +148,7 @@ document.addEventListener("DOMContentLoaded", () => {
         return writeJSON(STORAGE_KEY, data);
     }
 
-    /* DOM HELPERS */
+    /* ===================== DOM HELPERS ===================== */
 
     const $ = (selector, parent = document) => parent.querySelector(selector);
     const $$ = (selector, parent = document) => Array.from(parent.querySelectorAll(selector));
@@ -220,7 +222,7 @@ document.addEventListener("DOMContentLoaded", () => {
         toast._timeout = setTimeout(() => toast.classList.remove("show"), duration);
     }
 
-    /*  DATE HELPERS  */
+    /* ===================== DATE HELPERS ===================== */
 
     function dateKey(date = new Date()) {
         return `${date.getFullYear()}-${pad(date.getMonth() + 1)}-${pad(date.getDate())}`;
@@ -290,7 +292,7 @@ document.addEventListener("DOMContentLoaded", () => {
 
     const byStart = (a, b) => String(a.start).localeCompare(String(b.start));
 
-    /*  ACTIVITY LOGS  */
+    /* ===================== ACTIVITY LOGS ===================== */
 
     function getLogs() {
         const logs = readJSON(LOGS_KEY, []);
@@ -340,7 +342,7 @@ document.addEventListener("DOMContentLoaded", () => {
             .reduce((total, log) => total + (Number(log.minutes) || 0), 0);
     }
 
-    /*  PROFILE  */
+    /* ===================== PROFILE ===================== */
 
     function getDisplayName() {
         return data.profile.nickname.trim() || "Student";
@@ -395,7 +397,7 @@ document.addEventListener("DOMContentLoaded", () => {
         setSelectValue($("#settingsSchool"), data.profile.school);
     }
 
-    /*  LOGO / AVATAR  */
+    /* ===================== LOGO / AVATAR ===================== */
 
     function updateLogoUI() {
 
@@ -485,7 +487,7 @@ document.addEventListener("DOMContentLoaded", () => {
         event.target.value = "";
     }
 
-    /*  ONBOARDING  */
+    /* ===================== ONBOARDING ===================== */
 
     function showOnboardingStep(step) {
 
@@ -589,7 +591,7 @@ document.addEventListener("DOMContentLoaded", () => {
         `;
     }
 
-    /*  SUBJECTS */
+    /* ===================== SUBJECTS ===================== */
 
     function addSubjectInput(name = "", focus = true) {
 
@@ -2970,7 +2972,7 @@ document.addEventListener("DOMContentLoaded", () => {
                 description: totals.breakCount >= 10 ? "Completed 10 wellness activities" : `${totals.breakCount}/10 activities completed`,
                 unlocked: totals.breakCount >= 10
             },
-            { icon: "🔒", title: "More to Unlock", description: "Keep going!", unlocked: false }
+            
         ];
 
         container.innerHTML = "";
@@ -3252,7 +3254,8 @@ document.addEventListener("DOMContentLoaded", () => {
 
     function showAboutSettings() {
 
-    
+        // EDIT THIS: team photo, developer names and the date the app was made.
+        // Put the team photo in the images/ folder (example: images/team.jpg).
         const aboutInfo = {
             version: "1",
             created: "2026",
@@ -3260,7 +3263,7 @@ document.addEventListener("DOMContentLoaded", () => {
             developers: [
                 "Glaiza D. Fullante",
                 "Laarnie Joy C. Empeo",
-                "Kimberlly Carpo",
+                "Kimberlly Carcpo",
                 "Carl Chian Escovidal",
                 "Gendo Rex Leonor",
             ]
@@ -3304,7 +3307,7 @@ document.addEventListener("DOMContentLoaded", () => {
                 ${option("What is HealthyBreak?", "HealthyBreak is a study planner and wellness companion. It helps you plan your subjects and schedule, run study sessions, and take healthy breaks in between.")}
                 ${option("Purpose", "Many students study for hours without resting, which leads to stress and tiredness. HealthyBreak encourages a balance between studying and resting so you can learn better and feel better.")}
                 ${option("What is it for?", "Planning your weekly schedule, timing your study sessions, doing short break activities (relax, move, breathe), and tracking your progress and streaks.")}
-                ${option("Who is it for?", "College students of Southern Luzon State University (SLSU), who want to manage their study time and take care of their well-being.")}
+                ${option("Who is it for?", "College students, including students of Southern Luzon State University (SLSU), who want to manage their study time and take care of their well-being.")}
                 ${option("Version", `v${escapeHTML(aboutInfo.version)}`)}
             `,
 
@@ -3319,12 +3322,12 @@ document.addEventListener("DOMContentLoaded", () => {
             `,
 
             features: () => `
-                ${option(" Study timer", "Automatic study durations based on your year level, course, subjects, schedule and recent sessions.")}
-                ${option(" Break activities", `${activities.length} activities in Relax, Move and Breathe, with a suggested activity that fits your break.`)}
-                ${option(" Weekly schedule", "Add classes and study blocks, then skip or postpone them for today only without deleting them.")}
-                ${option(" Progress and achievements", "Track study time, break time, streaks, subject goals and unlockable achievements.")}
-                ${option(" Quick notes", "Write a note anytime. Your latest note appears on your Home page.")}
-                ${option(" Themes", "Choose from four themes: Neon Dark, Ocean, Forest and Violet.")}
+                ${option("📚Study timer", "Automatic study durations based on your year level, course, subjects, schedule and recent sessions.")}
+                ${option("🌿 Break activities", `${activities.length} activities in Relax, Move and Breathe, with a suggested activity that fits your break.`)}
+                ${option("🗓️ Weekly schedule", "Add classes and study blocks, then skip or postpone them for today only without deleting them.")}
+                ${option("📊 Progress and achievements", "Track study time, break time, streaks, subject goals and unlockable achievements.")}
+                ${option("📝 Quick notes", "Write a note anytime. Your latest note appears on your Home page.")}
+                ${option("🎨 Themes", "Choose from four themes: Neon Dark, Ocean, Forest and Violet.")}
             `,
 
             storage: () => `
@@ -3858,14 +3861,46 @@ document.addEventListener("DOMContentLoaded", () => {
             .hb-track-row { cursor: pointer; transition: border-color .2s ease, background .2s ease; }
             .hb-track-row:hover { border-color: var(--line-strong); }
             .hb-track-row.current { border-color: var(--cyan); background: var(--tint); }
-            @media (max-width: 700px) { .hb-player { display: none; } }
+                        @media (max-width: 700px) {
+                /* Phone: mini player floating above the bottom navigation */
+                .hb-player {
+                    display: grid;
+                    grid-template-columns: minmax(0, 1fr) auto;
+                    grid-template-areas: "info buttons" "seek seek";
+                    align-items: center;
+                    column-gap: 10px;
+                    row-gap: 4px;
+
+                    position: fixed;
+                    left: max(10px, var(--safe-left));
+                    right: max(10px, var(--safe-right));
+                    bottom: calc(66px + var(--safe-bottom) + 8px);
+                    z-index: 25;
+
+                    margin: 0;
+                    padding: 8px 10px;
+                    background: var(--panel);
+                    border-color: var(--line);
+                    box-shadow: 0 8px 24px rgba(0, 0, 0, .5);
+                }
+                .hb-player-top { grid-area: info; margin: 0; min-width: 0; }
+                .hb-player-icon { width: 30px; height: 30px; font-size: 14px; }
+                .hb-player-info strong { font-size: 12px; }
+                .hb-player-buttons { grid-area: buttons; margin: 0; gap: 4px; }
+                .hb-player-buttons button { flex: none; width: 38px; height: 38px; }
+                .hb-player-buttons .hb-play { flex: none; width: 46px; }
+                .hb-seek { grid-area: seek; }
+                .hb-player-volume { display: none; }
+
+            { padding-bottom: calc(150px + var(--safe-bottom)); }
+            (#dashboard:not(.hidden)) .toast { bottom: calc(150px + var(--safe-bottom)); }
+            }
             @media (max-height: 760px) and (min-width: 701px) { .hb-player-volume { display: none; } .hb-player { margin-bottom: 12px; padding: 10px; } }
             @media (max-height: 600px) and (min-width: 701px) { .hb-player-top { display: none; } .hb-player { margin-bottom: 8px; padding: 8px; } .hb-player-buttons { margin: 6px 0 0; } }
         `;
 
         document.head.appendChild(style);
 
-        /* ---------- layout: replace the old buttons that overlapped the logo ---------- */
 
         controls.remove();
 
@@ -3908,7 +3943,7 @@ document.addEventListener("DOMContentLoaded", () => {
             return `${Math.floor(seconds / 60)}:${pad(seconds % 60)}`;
         };
 
-        /*  player logic */
+        /* ---------- player logic ---------- */
 
         function updateInfo() {
             const track = tracks[index];
